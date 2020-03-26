@@ -1,0 +1,133 @@
+body{
+	margin: 0;
+	padding: 0;
+	background: #000;
+}
+
+footer{
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #262626;
+	color: #999;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+.carousel{
+	height: 700px;
+	perspective: 600px;
+	transform: translateY(-150px);
+}
+.carousel .carousel-item{
+	width: 300px;
+}
+.carousel-item img{
+	width: 100%;
+}
+.carousel-item h3{
+	padding: 10px 5px;
+	background: #fff;
+	margin: -5px 0 0;
+	box-sizing: border-box;
+	font-weight: bold;
+	font-size: 2em;
+	text-align: center;
+}
+.content a{
+	position: relative;
+	display: inline-block;
+	padding: 15px 8px;
+	margin-top: 20px;
+	background: #1E90FF;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1em;
+	font-weight: 700;
+	letter-spacing: 2px;
+}
+.content a{
+		font-size: 0.8em;
+		padding-left: 10px;
+	}
+
+@media(max-width:  991px){
+	.menuicon{
+		position: fixed;
+		top: 40px;
+		right: 35px;
+		width: 30px;
+		height: 30px;
+		background: url(menu.png);
+		filter: invert(1);
+		background-size: 30px;
+		cursor: pointer;
+		background-repeat: no-repeat;
+		z-index: 1000;
+	}
+	.menuicon.active{
+		background: url(close.png);
+		filter: invert(1);
+		background-size: 30px;
+		cursor: pointer;
+		background-repeat: no-repeat;
+		z-index: 1000;
+	}
+	.nav{
+		position: fixed;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,.95);
+		flex-direction: column;
+		z-index: 11;
+		border: none;
+		padding: 50px;
+	}
+	.nav.active{
+		left: 0;
+	}
+	.nav li{
+		margin: 5px 0;
+	}
+	section{
+		flex-direction: column-reverse;
+		justify-content: center;
+	}
+	section:before{
+	clip-path: polygon(0 0, 100% 0, 100% 17%, 0 28%);
+	}
+	section .content{
+		padding: 50px;
+		margin-bottom: 30px;
+	}
+	section .content h2{
+		font-size: 1.5em;
+	}
+	section .content p{
+		font-size: 1em;
+	}
+	section .content a{
+		font-size: 0.8em;
+		padding-left: 10px;
+	}
+	section .imgBx{
+		max-width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-right: 0;
+		margin-top: 20px;
+	}
+	section .imgBx img{
+		max-width: 300px;
+	}
+	.sci{
+		left: 50px;
+		bottom: 30px;
+	}
+}
